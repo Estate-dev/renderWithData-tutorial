@@ -1,0 +1,19 @@
+<body>
+{{>sidebar}}
+<div class="content"></div>
+</body>
+
+<template name="content">
+<div class="single fade">
+  <h1>{{feed.title}}</h1>
+  <p>{{feed.content}}</p>
+</div>
+</template>
+
+<template name="sidebar">
+<ul>
+  {{#each feeds}}
+  <li class="feed">{{title}}</li>
+  {{/each}}
+</ul>
+</template>
